@@ -13,3 +13,4 @@ def index():
 # This bit of code runs the app we just made with debug on
 if __name__ == "__main__":
     sc2.run(debug=True)
+
