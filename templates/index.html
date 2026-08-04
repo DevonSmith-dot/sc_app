@@ -1,6 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
     <meta charset="UTF-8">
+<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 
-</head>
+
+
+
+
+
+
+
+<a href="Search.html">Search Database</a>
+
+
+<table>
+
+{% for line in send_game %}
+<tr>
+    {% for item in line %}
+        <td>
+        {{ item }}
+        </td>
+    {% endfor %}
+    </tr>
+{% endfor %}
+
+</table>
