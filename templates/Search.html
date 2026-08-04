@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-
-
 <html lang="en">
 <head>
     <link rel="stylesheet"
@@ -10,18 +8,16 @@
 </head>
 <body>
 
-<h1>Search Database</h1>
-
-<a href="/">Main Page</a>T</a>
+<a href="/">Home Page</a>
 
 <form method="POST">
-    <lable for="username">Search Input</lable>
+    <lable for="username">Search Database</lable>
     <input type="text" id="username" name="game_id" required>
     <button type="submit">Submit</button>
 </form>
 
 {% if send_game %}
-    <p>"" {{ send_game }}!</p>
+    <p>" " {{ send_game }}!</p>
 {% endif %}
 
 </body>
