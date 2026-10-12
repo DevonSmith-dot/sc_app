@@ -8,5 +8,16 @@
 </head>
 <body>
     <h1>Hello from my first template</h1>
-</body>
+    
+    <table>
+    {% for line in results %}
+    <tr>
+        {% for item in line %}
+        <td>
+        {{ item }}
+        </td>
+        {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
 </html>
