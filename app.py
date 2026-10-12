@@ -13,7 +13,7 @@ def index():
     cursor = db.cursor()#create the cursor
     #store a query as a string variable
     sql = "SELECT * " \
-    "      FROM Unit_Upgrades"
+    "      FROM Units"
     cursor.execute(sql)#execute the query
     results = cursor.fetchall()#fetch all the results of the query (can use fetchone too)
     db.close() #close the database now we are done- no need to commit this time with db.commit()
