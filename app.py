@@ -11,14 +11,14 @@ def index():
     #Connect to the database file
     db = sqlite3.connect('sc.db')
     cursor = db.cursor()#create the cursor
-    #store a query as a string variable
     sql = """SELECT 
-    Units.name AS unit_name,
-    Upgrades.name AS upgrade_name
-    FROM Units
-    INNER JOIN Unit_Upgrades ON Units.id = Unit_Upgrades.unit_id
-    INNER JOIN Upgrades ON Unit_Upgrades.upgrade_id = Upgrades.id
-    ORDER BY Units.name;"""
+                Units.name AS unit_name,
+                Upgrades.name AS upgrade_name
+    
+             FROM Units
+             INNER JOIN Unit_Upgrades ON Units.id = Unit_Upgrades.unit_id
+             INNER JOIN Upgrades ON Unit_Upgrades.upgrade_id = Upgrades.id
+             ORDER BY Units.name;"""
     cursor.execute(sql)#execute the query
     results = cursor.fetchall()#fetch all the results of the query (can use fetchone too)
     db.close() #close the database now we are done- no need to commit this time with db.commit()
