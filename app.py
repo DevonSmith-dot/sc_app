@@ -19,6 +19,7 @@ def index():
              INNER JOIN Unit_Upgrades ON Units.id = Unit_Upgrades.unit_id
              INNER JOIN Upgrades ON Unit_Upgrades.upgrade_id = Upgrades.id
              ORDER BY Units.name;"""
+    
     cursor.execute(sql)#execute the query
     results = cursor.fetchall()#fetch all the results of the query (can use fetchone too)
     db.close() #close the database now we are done- no need to commit this time with db.commit()
